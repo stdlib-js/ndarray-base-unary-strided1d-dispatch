@@ -35,43 +35,37 @@ limitations under the License.
 
 > Constructor for applying a strided function to an input ndarray.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-base-unary-strided1d-dispatch
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-UnaryStrided1dDispatch = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-unary-strided1d-dispatch@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var UnaryStrided1dDispatch = require( 'path/to/vendor/umd/ndarray-base-unary-strided1d-dispatch/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-unary-strided1d-dispatch@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.UnaryStrided1dDispatch;
-})();
-</script>
+var UnaryStrided1dDispatch = require( '@stdlib/ndarray-base-unary-strided1d-dispatch' );
 ```
 
 #### UnaryStrided1dDispatch( table, idtypes, odtypes, policy )
 
-Constructor for applying a strided function to an input ndarray.
+Returns an interface for applying a strided function to an input ndarray.
 
 ```javascript
 var base = require( '@stdlib/stats-base-ndarray-cumax' );
@@ -88,9 +82,19 @@ var unary = new UnaryStrided1dDispatch( table, [ dtypes ], dtypes, policy );
 
 The constructor has the following parameters:
 
--   **table**: strided function dispatch table. Must have a `'default'` property and a corresponding strided function. May have additional properties corresponding to specific data types and associated specialized strided functions.
+-   **table**: strided function dispatch table. Must have the following properties:
+
+    -   **default**: default strided function which should be invoked when provided ndarrays have data types which do not have a corresponding specialized implementation.
+
+    A dispatch table may have the following additional properties:
+
+    -   **types**: one-dimensional list of ndarray data types describing specialized input and output ndarray argument signatures. Only the input and output ndarray argument data types should be specified. Additional ndarray argument data types should be omitted and are not considered during dispatch. The length of `types` must equal the number of strided functions specified by `fcns` multiplied by two (i.e., for every pair of input-output ndarray data types, there must be a corresponding strided function in `fcns`).
+    -   **fcns**: list of strided functions which are specific to specialized input and output ndarray argument signatures.
+
 -   **idtypes**: list containing lists of supported input data types for each input ndarray argument.
--   **odtypes**: list of supported input data types.
+
+-   **odtypes**: list of supported output data types.
+
 -   **policy**: output data type policy.
 
 #### UnaryStrided1dDispatch.prototype.apply( x\[, ...args]\[, options] )
@@ -215,6 +219,16 @@ The function accepts the following options:
 
 ## Notes
 
+-   A strided function should have the following signature:
+
+    ```text
+    f( arrays )
+    ```
+
+    where
+
+    -   **arrays**: array containing input and output ndarrays, along with any additional ndarray arguments.
+
 -   The output data type policy only applies to the `apply` method. For the `assign` method, the output ndarray is allowed to have any data type.
 
 </section>
@@ -225,21 +239,20 @@ The function accepts the following options:
 
 ## Examples
 
+<!-- eslint-disable array-element-newline -->
+
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-cumax@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtype@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-unary-strided1d-dispatch@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var dcumax = require( '@stdlib/stats-base-ndarray-dcumax' );
+var scumax = require( '@stdlib/stats-base-ndarray-scumax' );
+var base = require( '@stdlib/stats-base-ndarray-cumax' );
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var dtype = require( '@stdlib/ndarray-dtype' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var ndarray = require( '@stdlib/ndarray-ctor' );
+var UnaryStrided1dDispatch = require( '@stdlib/ndarray-base-unary-strided1d-dispatch' );
 
 // Define the supported input and output data types:
 var idt = dtypes( 'real_and_generic' );
@@ -250,6 +263,14 @@ var policy = 'same';
 
 // Define a dispatch table:
 var table = {
+    'types': [
+        'float64', 'float64', // input, output
+        'float32', 'float32'  // input, output
+    ],
+    'fcns': [
+        dcumax,
+        scumax
+    ],
     'default': base
 };
 
@@ -276,11 +297,6 @@ console.log( dt );
 
 // Print the results:
 console.log( ndarray2array( y ) );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
