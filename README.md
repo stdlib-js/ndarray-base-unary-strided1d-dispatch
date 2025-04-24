@@ -227,7 +227,7 @@ The method accepts the following options:
 
     where
 
-    -   **arrays**: array containing input and output ndarrays, along with any additional ndarray arguments.
+    -   **arrays**: array containing an input and an output ndarray, followed by any additional ndarray arguments.
 
 -   The output data type policy only applies to the `apply` method. For the `assign` method, the output ndarray is allowed to have any data type.
 
@@ -330,11 +330,6 @@ For more information on the project, filing bug reports and feature requests, an
 
 ---
 
-## License
-
-See [LICENSE][stdlib-license].
-
-
 ## Copyright
 
 Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
@@ -380,8 +375,6 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 [esm-url]: https://github.com/stdlib-js/ndarray-base-unary-strided1d-dispatch/tree/esm
 [esm-readme]: https://github.com/stdlib-js/ndarray-base-unary-strided1d-dispatch/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/ndarray-base-unary-strided1d-dispatch/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-base-unary-strided1d-dispatch/main/LICENSE
 
 </section>
 
