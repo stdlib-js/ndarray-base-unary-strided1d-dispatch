@@ -43,6 +43,7 @@
 
 <details>
 
+-   [`03e37de`](https://github.com/stdlib-js/stdlib/commit/03e37de727a96025a60f60b910bd3029365b9bb6) - **refactor:** avoid unnecessary variable _(by Athan Reines)_
 -   [`86165ae`](https://github.com/stdlib-js/stdlib/commit/86165ae550a1ada6f35aa760ab65c3f3e2440f7c) - **docs:** update copy _(by Athan Reines)_
 -   [`db2ad49`](https://github.com/stdlib-js/stdlib/commit/db2ad49f2600daac6a52b0c73bd6de2246d3cd5a) - **chore:** add todo _(by Athan Reines)_
 -   [`10cee20`](https://github.com/stdlib-js/stdlib/commit/10cee20847e51f75adc284d72a4908a2dc30c440) - **refactor:** remove unnecessary parameter _(by Athan Reines)_
