@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-04-27)
+## Unreleased (2025-05-04)
 
 <section class="features">
 
@@ -45,6 +45,7 @@
 
 <details>
 
+-   [`9990c87`](https://github.com/stdlib-js/stdlib/commit/9990c87f2b4d99bab6fc24a5376ac69c1b160db1) - **docs:** update note _(by Athan Reines)_
 -   [`d1bc036`](https://github.com/stdlib-js/stdlib/commit/d1bc0365ded44eefb0073b8ae9bf582041b49be5) - **feat:** add support for enforcing traversal order _(by Athan Reines)_
 -   [`f0602e3`](https://github.com/stdlib-js/stdlib/commit/f0602e31fcfab3c05954ac9b3d37ae01d3f51b6b) - **refactor:** replace policy string argument with a policy object _(by Athan Reines)_
 -   [`03e37de`](https://github.com/stdlib-js/stdlib/commit/03e37de727a96025a60f60b910bd3029365b9bb6) - **refactor:** avoid unnecessary variable _(by Athan Reines)_
