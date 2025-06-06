@@ -38,7 +38,6 @@
   },
   "dependencies": {
     "@stdlib/array-base-assert-contains": "^0.2.2",
-    "@stdlib/array-base-assert-is-data-type": "^0.2.1",
     "@stdlib/array-base-copy": "^0.2.2",
     "@stdlib/array-base-every-by": "^0.2.2",
     "@stdlib/array-base-join": "^0.1.1",
@@ -53,6 +52,7 @@
     "@stdlib/assert-is-ndarray-like": "^0.2.2",
     "@stdlib/assert-is-object": "^0.2.2",
     "@stdlib/assert-is-plain-object": "^0.2.2",
+    "@stdlib/ndarray-base-assert-is-data-type": "^0.2.2",
     "@stdlib/ndarray-base-assert-is-input-casting-policy": "github:stdlib-js/ndarray-base-assert-is-input-casting-policy#main",
     "@stdlib/ndarray-base-assert-is-output-data-type-policy": "github:stdlib-js/ndarray-base-assert-is-output-data-type-policy#main",
     "@stdlib/ndarray-base-assign": "^0.1.1",

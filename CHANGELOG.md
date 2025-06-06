@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-05-19)
+## Unreleased (2025-06-06)
 
 <section class="features">
 
@@ -21,6 +21,7 @@
 
 ### Bug Fixes
 
+-   [`c86cb96`](https://github.com/stdlib-js/stdlib/commit/c86cb96872dce4d7b508daf43886e10c0fedad8f) - update require path
 -   [`b43db40`](https://github.com/stdlib-js/stdlib/commit/b43db40273306f34ee9cde05d82c7fb9207aeb2b) - ensure correct ndarray argument order where output ndarray should be second ndarray argument
 -   [`ac10964`](https://github.com/stdlib-js/stdlib/commit/ac109649d1cfad63800282f0d509aff419bfeb33) - ensure correct table validation
 
@@ -45,6 +46,7 @@
 
 <details>
 
+-   [`c86cb96`](https://github.com/stdlib-js/stdlib/commit/c86cb96872dce4d7b508daf43886e10c0fedad8f) - **fix:** update require path _(by Athan Reines)_
 -   [`9990c87`](https://github.com/stdlib-js/stdlib/commit/9990c87f2b4d99bab6fc24a5376ac69c1b160db1) - **docs:** update note _(by Athan Reines)_
 -   [`d1bc036`](https://github.com/stdlib-js/stdlib/commit/d1bc0365ded44eefb0073b8ae9bf582041b49be5) - **feat:** add support for enforcing traversal order _(by Athan Reines)_
 -   [`f0602e3`](https://github.com/stdlib-js/stdlib/commit/f0602e31fcfab3c05954ac9b3d37ae01d3f51b6b) - **refactor:** replace policy string argument with a policy object _(by Athan Reines)_
