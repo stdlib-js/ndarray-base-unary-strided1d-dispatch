@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-09-10)
+## Unreleased (2025-09-11)
 
 <section class="features">
 
@@ -21,6 +21,7 @@
 
 ### Bug Fixes
 
+-   [`04c9415`](https://github.com/stdlib-js/stdlib/commit/04c941540b13db13db7f312a6f91dd120940cdc2) - use correct variable
 -   [`c86cb96`](https://github.com/stdlib-js/stdlib/commit/c86cb96872dce4d7b508daf43886e10c0fedad8f) - update require path
 -   [`b43db40`](https://github.com/stdlib-js/stdlib/commit/b43db40273306f34ee9cde05d82c7fb9207aeb2b) - ensure correct ndarray argument order where output ndarray should be second ndarray argument
 -   [`ac10964`](https://github.com/stdlib-js/stdlib/commit/ac109649d1cfad63800282f0d509aff419bfeb33) - ensure correct table validation
@@ -46,6 +47,7 @@
 
 <details>
 
+-   [`04c9415`](https://github.com/stdlib-js/stdlib/commit/04c941540b13db13db7f312a6f91dd120940cdc2) - **fix:** use correct variable _(by Athan Reines)_
 -   [`e11eb77`](https://github.com/stdlib-js/stdlib/commit/e11eb777e6ca3c2f0b9bdccdffeee5cf25dac9f1) - **docs:** add empty intro section _(by Athan Reines)_
 -   [`565ae6c`](https://github.com/stdlib-js/stdlib/commit/565ae6c872ce74c4853618182fc33c8a30371d42) - **docs:** update description _(by Athan Reines)_
 -   [`c86cb96`](https://github.com/stdlib-js/stdlib/commit/c86cb96872dce4d7b508daf43886e10c0fedad8f) - **fix:** update require path _(by Athan Reines)_
