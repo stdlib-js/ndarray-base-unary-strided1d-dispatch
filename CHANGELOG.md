@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-09-12)
+## Unreleased (2025-09-13)
 
 <section class="features">
 
@@ -47,6 +47,7 @@
 
 <details>
 
+-   [`626b52b`](https://github.com/stdlib-js/stdlib/commit/626b52bc5f30d90237d82055095814a5f6e75546) - **docs:** remove comma _(by Athan Reines)_
 -   [`fb46eb4`](https://github.com/stdlib-js/stdlib/commit/fb46eb45105af0689c8f7089672340de742efedd) - **docs:** fix comment _(by Athan Reines)_
 -   [`04c9415`](https://github.com/stdlib-js/stdlib/commit/04c941540b13db13db7f312a6f91dd120940cdc2) - **fix:** use correct variable _(by Athan Reines)_
 -   [`e11eb77`](https://github.com/stdlib-js/stdlib/commit/e11eb777e6ca3c2f0b9bdccdffeee5cf25dac9f1) - **docs:** add empty intro section _(by Athan Reines)_
