@@ -53,6 +53,7 @@
     "@stdlib/assert-is-ndarray-like": "^0.2.2",
     "@stdlib/assert-is-object": "^0.2.2",
     "@stdlib/assert-is-plain-object": "^0.2.2",
+    "@stdlib/blas-ext-base-gindex-of-row": "github:stdlib-js/blas-ext-base-gindex-of-row#main",
     "@stdlib/ndarray-base-assert-is-data-type": "^0.2.2",
     "@stdlib/ndarray-base-assert-is-input-casting-policy": "github:stdlib-js/ndarray-base-assert-is-input-casting-policy#main",
     "@stdlib/ndarray-base-assert-is-output-data-type-policy": "github:stdlib-js/ndarray-base-assert-is-output-data-type-policy#main",
