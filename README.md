@@ -161,7 +161,6 @@ By default, the method returns an ndarray having a data type determined by the o
 
 ```javascript
 var ndarray = require( '@stdlib/ndarray-base-ctor' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
 var base = require( '@stdlib/stats-base-ndarray-cumax' );
 var getDType = require( '@stdlib/ndarray-dtype' );
 
@@ -360,11 +359,6 @@ For more information on the project, filing bug reports and feature requests, an
 
 ---
 
-## License
-
-See [LICENSE][stdlib-license].
-
-
 ## Copyright
 
 Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
@@ -380,8 +374,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/ndarray-base-unary-strided1d-dispatch.svg
 [npm-url]: https://npmjs.org/package/@stdlib/ndarray-base-unary-strided1d-dispatch
 
-[test-image]: https://github.com/stdlib-js/ndarray-base-unary-strided1d-dispatch/actions/workflows/test.yml/badge.svg?branch=v0.1.1
-[test-url]: https://github.com/stdlib-js/ndarray-base-unary-strided1d-dispatch/actions/workflows/test.yml?query=branch:v0.1.1
+[test-image]: https://github.com/stdlib-js/ndarray-base-unary-strided1d-dispatch/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/ndarray-base-unary-strided1d-dispatch/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/ndarray-base-unary-strided1d-dispatch/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/ndarray-base-unary-strided1d-dispatch?branch=main
@@ -410,8 +404,6 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [esm-url]: https://github.com/stdlib-js/ndarray-base-unary-strided1d-dispatch/tree/esm
 [esm-readme]: https://github.com/stdlib-js/ndarray-base-unary-strided1d-dispatch/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/ndarray-base-unary-strided1d-dispatch/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-base-unary-strided1d-dispatch/main/LICENSE
 
 [@stdlib/ndarray/output-dtype-policies]: https://github.com/stdlib-js/ndarray-output-dtype-policies
 
